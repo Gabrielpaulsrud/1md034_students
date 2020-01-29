@@ -1,10 +1,98 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>DELI-VERY</title>
+        <title>Gabriel's burgers</title>
+        <meta charset="utf-8"/>
     </head>
     <body>
-        <h1>Hello World!!!</h1>
-        <a href="/map" target="_blank">Open map in new window</a>.
+        <main>
+            <h1>Welcome to Gabriesl's burgers</h1>
+            <section>
+                <h3>Select your burger</h3>
+                <p>
+                    This is where you choose your burger
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hallomui burger</th>
+                            <th>Oumph burger</th>
+                            <th>Avocado & Bean burger</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://www.burgerking.se/011_se/Product%20images/Burgers/image-thumb__15088__product_detail/Sourdough-Halloumi_Produktbilder-Hemsida_1.png" alt="Halloumi Burger" width="300"></td>
+                            <td><img src="https://www.max.se/contentassets/10aac66bde484d38bbf6e8b37c0e6e36/product_bbq-sandwich2.jpg" alt="Oumph Burger" width="300"></td>
+                            <td><img src="https://www.mooyah.com/uploads/globals/Avocado-Ranch-Black-Bean-Burger.png" alt="Avocado & Bean burger" width="300"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Vegeterian</li>
+                                    <li>Calories: 700</li>
+                                    <li>Allergies: Gluten, Lactose</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Vegan</li>
+                                    <li>Calories: 500</li>
+                                    <li>Allergies: Gluten</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Vegeterian</li>
+                                    <li>Calories:6500</li>
+                                    <li>Allergies: Gluten, Lactose</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                </tbody>
+            </table>
+            </section>
+            <section>
+                <h3>Customer infromation</h3>
+                <p>This is where you provide necessary information</p>
+                <p>
+                    <label for="Full name">Name</label><br>
+                    <input type="text" id="name" name="n" required="required" placeholder="First and last name" />
+                </p>
+                <p>
+                    <label for="E-mail">email</label><br>
+                    <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+                </p>
+                <p>
+                    <label for="street">Street name</label><br>
+                    <input type="text" id="street" name="st" placeholder="Street name" />
+                </p>
+                <p>
+                    <label for="house">House number</label><br>
+                    <input type="number" id="house" name="hn" placeholder="House number" />
+                </p>
+                <p>
+                    <label for="payment">Payment</label><br />
+                    <select id="payment" name="py">
+                        <option selected = "selected">Swish</option>
+                        <option>Credit Card</option>
+                        <option>Bitcoin</option>
+                        <option>Cash with Postnord</option>
+                    </select>
+                </p>
+                <p>
+                    Choose Gender <br>
+                    <input type="radio" name="Gender" id = "male" value = male/> <label for="male">Male</label><br>
+                    <input type="radio" name="Gender" id = "female" value = female/> <label for="female">Female</label><br>
+                    <input type="radio" name="Gender" id = "nonbinary" value = non binary/> <label for="nonbinary">Non binary</label><br>
+                    <input checked = "checked" type="radio" name="Gender" id = "none" value = none/> <label for="none">Do not wish to provide</label><br>
+                </p>
+                <input type="submit" value="Send" />
+        </main>
+        <footer>
+            <p>
+                © 2020 Gabriel Burgers Inc.
+            </p>
+        </footer>
     </body>
 </html>
