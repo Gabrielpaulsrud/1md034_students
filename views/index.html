@@ -1,17 +1,34 @@
 <html lang="en">
     <head>
+        <link rel="reset" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Gabriel's burgers</title>
         <meta charset="utf-8"/>
     </head>
     <body>
         <main>
-            <h1>Welcome to Gabriesl's burgers</h1>
-            <section>
+            <figure>
+                <h1 id="Welcome">Welcome to Gabriesl's burgers</h1>
+                <td><img src="img/leafs.jpg" alt="Leafs" id="Leafs"></td>
+            </figure>
+            <section id="Burgers" >
                 <h3>Select your burger</h3>
                 <p>
                     This is where you choose your burger
                 </p>
-                <table>
+
+                <div class="Burger_grid">
+                    <div class="box he1">Hallomui burger</div>
+                    <div class="box he2">Oumph burger</div>
+                    <div class="box he3">Avocado & Bean burger</div>
+                    <div class="box pic1"><img src="https://www.burgerking.se/011_se/Product%20images/Burgers/image-thumb__15088__product_detail/Sourdough-Halloumi_Produktbilder-Hemsida_1.png" alt="Halloumi Burger" width=300px></div>
+                    <div class="box pic2"><img src="img/burger.png" alt="Oumph Burger" width=300px></div>
+                    <div class="box pic3"><img src="https://www.mooyah.com/uploads/globals/Avocado-Ranch-Black-Bean-Burger.png" alt="Avocado & Bean burger" width=300px></div>
+                    <div class="box des1"><span id = "allergies"> Gluten, Lactose</span></div>
+                    <div class="box des2"><span id = "allergies"> Gluten</span></div>
+                    <div class="box des3"><span id = "allergies"> Gluten, Lactose</span></div>
+                </div>
+                <!-- <table id="Burger_table">
                     <thead>
                         <tr>
                             <th>Hallomui burger</th>
@@ -22,7 +39,7 @@
                     <tbody>
                         <tr>
                             <td><img src="https://www.burgerking.se/011_se/Product%20images/Burgers/image-thumb__15088__product_detail/Sourdough-Halloumi_Produktbilder-Hemsida_1.png" alt="Halloumi Burger" width="300"></td>
-                            <td><img src="https://www.max.se/contentassets/10aac66bde484d38bbf6e8b37c0e6e36/product_bbq-sandwich2.jpg" alt="Oumph Burger" width="300"></td>
+                            <td><img src="https://lh3.googleusercontent.com/proxy/NVeD6MsUzRBIoObnQtl8ZVYwpYQ7baMcxvYohUR_H2qCLAzOaNMHY9wF0-C1ls_Ig4wpuFyq3Hk_pm2bsakI2F54JOnLqzxgH0DTdSko6OxDbBfUxOAH5s7Z9iI" alt="Oumph Burger" width="250"></td>
                             <td><img src="https://www.mooyah.com/uploads/globals/Avocado-Ranch-Black-Bean-Burger.png" alt="Avocado & Bean burger" width="300"></td>
                         </tr>
                         <tr>
@@ -30,29 +47,29 @@
                                 <ul>
                                     <li>Vegeterian</li>
                                     <li>Calories: 700</li>
-                                    <li>Allergies: Gluten, Lactose</li>
+                                    <li>Contains:  <span id = "allergies"> Gluten, Lactose</span></li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
                                     <li>Vegan</li>
                                     <li>Calories: 500</li>
-                                    <li>Allergies: Gluten</li>
+                                    <li>Contains: <span id = "allergies"> Gluten</span></li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
                                     <li>Vegeterian</li>
                                     <li>Calories:6500</li>
-                                    <li>Allergies: Gluten, Lactose</li>
+                                    <li>Allergies:  <span id = "allergies"> Gluten, Lactose</span></li>
                                 </ul>
                             </td>
                         </tr>
 
                 </tbody>
-            </table>
+            </table>-->
             </section>
-            <section>
+            <section id = "Customer_info">
                 <h3>Customer infromation</h3>
                 <p>This is where you provide necessary information</p>
                 <p>
@@ -87,7 +104,7 @@
                     <input type="radio" name="Gender" id = "nonbinary" value = non binary/> <label for="nonbinary">Non binary</label><br>
                     <input checked = "checked" type="radio" name="Gender" id = "none" value = none/> <label for="none">Do not wish to provide</label><br>
                 </p>
-                <input type="submit" value="Send" />
+                <button type="submit"><img src="./img/download.jpg" width = 10/> Send Info</button>
         </main>
         <footer>
             <p>
