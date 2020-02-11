@@ -35,9 +35,9 @@ figure{
 .Burger_grid{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 30% 30% 30%;
     background-color: rgb(0,0,0);
-    color: rgb(0,0,0);
+    color: rgb(255,255,255);
 }
 
 .box {
@@ -48,6 +48,7 @@ figure{
     font-size: 150%;
 
 }
+/*
 .he1{
     grid-column: 1;
     grid-row: 1;
@@ -83,7 +84,7 @@ figure{
 .desc3{
     grid-column: 3;
     grid-row: 3;
-}
+}*/
 
 section{
     margin: 40px;

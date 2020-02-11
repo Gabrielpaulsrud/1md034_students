@@ -4,6 +4,9 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Gabriel's burgers</title>
         <meta charset="utf-8"/>
+         <script src="js/js_script.js" defer></script>
+         <script src="js/vue_script.js" defer></script>
+         <script src="https://vuejs.org/js/vue.js"></script>
     </head>
     <body>
         <main>
@@ -17,57 +20,8 @@
                     This is where you choose your burger
                 </p>
 
-                <div class="Burger_grid">
-                    <div class="box he1">Hallomui burger</div>
-                    <div class="box he2">Oumph burger</div>
-                    <div class="box he3">Avocado & Bean burger</div>
-                    <div class="box pic1"><img src="https://www.burgerking.se/011_se/Product%20images/Burgers/image-thumb__15088__product_detail/Sourdough-Halloumi_Produktbilder-Hemsida_1.png" alt="Halloumi Burger" width=300px></div>
-                    <div class="box pic2"><img src="img/burger.png" alt="Oumph Burger" width=300px></div>
-                    <div class="box pic3"><img src="https://www.mooyah.com/uploads/globals/Avocado-Ranch-Black-Bean-Burger.png" alt="Avocado & Bean burger" width=300px></div>
-                    <div class="box des1"><span id = "allergies"> Gluten, Lactose</span></div>
-                    <div class="box des2"><span id = "allergies"> Gluten</span></div>
-                    <div class="box des3"><span id = "allergies"> Gluten, Lactose</span></div>
+                <div class="Burger_grid" id="burgerGrid" >
                 </div>
-                <!-- <table id="Burger_table">
-                    <thead>
-                        <tr>
-                            <th>Hallomui burger</th>
-                            <th>Oumph burger</th>
-                            <th>Avocado & Bean burger</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="https://www.burgerking.se/011_se/Product%20images/Burgers/image-thumb__15088__product_detail/Sourdough-Halloumi_Produktbilder-Hemsida_1.png" alt="Halloumi Burger" width="300"></td>
-                            <td><img src="https://lh3.googleusercontent.com/proxy/NVeD6MsUzRBIoObnQtl8ZVYwpYQ7baMcxvYohUR_H2qCLAzOaNMHY9wF0-C1ls_Ig4wpuFyq3Hk_pm2bsakI2F54JOnLqzxgH0DTdSko6OxDbBfUxOAH5s7Z9iI" alt="Oumph Burger" width="250"></td>
-                            <td><img src="https://www.mooyah.com/uploads/globals/Avocado-Ranch-Black-Bean-Burger.png" alt="Avocado & Bean burger" width="300"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>Vegeterian</li>
-                                    <li>Calories: 700</li>
-                                    <li>Contains:  <span id = "allergies"> Gluten, Lactose</span></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Vegan</li>
-                                    <li>Calories: 500</li>
-                                    <li>Contains: <span id = "allergies"> Gluten</span></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Vegeterian</li>
-                                    <li>Calories:6500</li>
-                                    <li>Allergies:  <span id = "allergies"> Gluten, Lactose</span></li>
-                                </ul>
-                            </td>
-                        </tr>
-
-                </tbody>
-            </table>-->
             </section>
             <section id = "Customer_info">
                 <h3>Customer infromation</h3>
