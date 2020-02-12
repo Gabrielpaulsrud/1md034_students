@@ -8,17 +8,19 @@ function Burger(name, kCal, gluten, lactose, imgPath){
         return this.name + " " + this.kCal + "kCal";
     };
 }
+
+
 let HalloumiBurger = new Burger("Halloumi Burger", 700, true, true, "https://www.burgerking.se/011_se/Product%20images/Burgers/image-thumb__15088__product_detail/Sourdough-Halloumi_Produktbilder-Hemsida_1.png");
 let Oumph_Burger = new Burger("Oumph Burger", 500, true, false, "img/burger.png");
 let AvocadoAndBeanBurger = new Burger("Avocado & Bean Burger",600, true, true, "img/avo_burger.png");
 let b1 = new Burger("burger 1", 100, true, true, "img/burger.png");
 let b2 = new Burger("burger 2", 200, true, true, "img/avo_burger.png");
 
+/*
 const burgers = [HalloumiBurger, Oumph_Burger, AvocadoAndBeanBurger, b1, b2];
 
+/*
 let grid = document.getElementById("burgerGrid");
-
-
 
 for (let burger of burgers)
 {
@@ -48,7 +50,7 @@ for (let burger of burgers)
     grid.appendChild(burgerDiv);
 }
 
-
+*/
 
 
 /*

@@ -10,13 +10,11 @@ const vm = new Vue({
     h5: b2.info()
   }
 })
-
-//Vue numero doz
-const vm = new Vue({
-  el: '#myID',
-  data: {
-   array: burgers,
-   b2: b2
-  }
-})
 */
+
+var vm = new Vue({
+    el: '#burgerTable',
+    data: {
+    burgers: burgers
+}
+})
