@@ -1,23 +1,41 @@
-function Burger(name, kCal, gluten, lactose, imgPath){
-    this.name = name;
-    this.kCal = kCal;
-    this.gluten = gluten;
-    this.lactose = lactose;
-    this.imgPath = imgPath;
-    this.info = function(){
-        return this.name + " " + this.kCal + "kCal";
-    };
+function mylog(a) {
+    console.log(a);
 }
 
+function getAnswers() {
+    /*
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var street = document.getElementById("street").value;
+    var house = document.getElementById("house").value;
+    var payment = document.getElementById("payment").value;
+    var radio = document.getElementsByName("Gender");
+    for (var i = 0, length = radio.length; i < length; i++){
+        if (radio[i].checked) {
+            var gender = radio[i].id;
+            break
+        }
+    }
+    let answerArray = [name, email, street, house, payment, gender];
+    console.log(answerArray);*/
 
-let HalloumiBurger = new Burger("Halloumi Burger", 700, true, true, "https://www.burgerking.se/011_se/Product%20images/Burgers/image-thumb__15088__product_detail/Sourdough-Halloumi_Produktbilder-Hemsida_1.png");
-let Oumph_Burger = new Burger("Oumph Burger", 500, true, false, "img/burger.png");
-let AvocadoAndBeanBurger = new Burger("Avocado & Bean Burger",600, true, true, "img/avo_burger.png");
-let b1 = new Burger("burger 1", 100, true, true, "img/burger.png");
-let b2 = new Burger("burger 2", 200, true, true, "img/avo_burger.png");
+    this.showAnswers = true;
+    let burgers = this.burgers;
+    for(let i = 0; i < burgers.length; i++){
+        var burgerbutton = document.getElementById(burgers[i].name);
+        if (burgerbutton.checked) {
+            this.selectedburgers.push(burgers[i].name);
+            mylog(burgers[i].name);
+        }
 
-/*
-const burgers = [HalloumiBurger, Oumph_Burger, AvocadoAndBeanBurger, b1, b2];
+}
+}
+
+//let submitButton = document.getElementById("submitButton");
+//let testButton = document.getElementById("testButton");
+
+//submitButton.onclick = mylog;
+//testButton.onclick = getAnswers;
 
 /*
 let grid = document.getElementById("burgerGrid");

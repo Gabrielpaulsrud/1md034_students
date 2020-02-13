@@ -19,5 +19,19 @@ let burgersJSON = [
         "lactose" : false,
         "gluten" : true,
         "imgPath" : "img/avo_burger.png"
+    },
+    {
+        "name" : "b1",
+        "kCal" : 100,
+        "lactose" : false,
+        "gluten" : true,
+        "imgPath" : "img/avo_burger.png"
+    },
+    {
+        "name" : "b2",
+        "kCal" : 200,
+        "lactose" : false,
+        "gluten" : true,
+        "imgPath" : "img/avo_burger.png"
     }
 ]

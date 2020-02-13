@@ -10,7 +10,7 @@
          <script type="text/javascript" src="js/menu.js"></script>
     </head>
     <body>
-        <main>
+        <main id ="mainBody">
             <figure>
                 <h1 id="Welcome">Welcome to Gabriesl's burgers</h1>
                 <td><img src="img/leafs.jpg" alt="Leafs" id="Leafs"></td>
@@ -34,6 +34,11 @@
                             </td>
                         </tr>
                         <tr>
+                            <td v-for="burger in burgers">
+                                <input type="checkbox" v-bind:id=burger.name value=burger.name>
+                            </td>
+                        </tr>
+                        <tr>
                             <td v-for="burger in burgers">{{burger.name}}</td>
                         </tr>
 
@@ -50,23 +55,23 @@
                 <p>This is where you provide necessary information</p>
                 <p>
                     <label for="Full name">Name</label><br>
-                    <input type="text" id="name" name="n" required="required" placeholder="First and last name" />
+                    <input v-model="name" type="text" id="name" name="n" required="required" placeholder="First and last name" />
                 </p>
                 <p>
                     <label for="E-mail">email</label><br>
-                    <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+                    <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
                 </p>
                 <p>
                     <label for="street">Street name</label><br>
-                    <input type="text" id="street" name="st" placeholder="Street name" />
+                    <input v-model="street" type="text" id="street" name="st" placeholder="Street name" />
                 </p>
                 <p>
                     <label for="house">House number</label><br>
-                    <input type="number" id="house" name="hn" placeholder="House number" />
+                    <input v-model="house" type="number" id="house" name="hn" placeholder="House number" />
                 </p>
                 <p>
                     <label for="payment">Payment</label><br />
-                    <select id="payment" name="py">
+                    <select v-model="payment" id="payment" name="py">
                         <option selected = "selected">Swish</option>
                         <option>Credit Card</option>
                         <option>Bitcoin</option>
@@ -75,12 +80,26 @@
                 </p>
                 <p>
                     Choose Gender <br>
-                    <input type="radio" name="Gender" id = "male" value = male/> <label for="male">Male</label><br>
-                    <input type="radio" name="Gender" id = "female" value = female/> <label for="female">Female</label><br>
-                    <input type="radio" name="Gender" id = "nonbinary" value = non binary/> <label for="nonbinary">Non binary</label><br>
-                    <input checked = "checked" type="radio" name="Gender" id = "none" value = none/> <label for="none">Do not wish to provide</label><br>
+                    <input v-model="gender" type="radio" name="Gender" id = "male" value = male> <label for="male">Male</label><br>
+                    <input v-model="gender" type="radio" name="Gender" id = "female" value = female> <label for="female">Female</label><br>
+                    <input v-model="gender" type="radio" name="Gender" id = "nonbinary" value = "non binary"/> <label for="nonbinary">Non binary</label><br>
+                    <input v-model="gender" checked = "checked" type="radio" name="Gender" id = "none" value = none> <label for="none">Do not wish to provide</label><br>
                 </p>
-                <button type="submit"><img src="./img/download.jpg" width = 10/> Send Info</button>
+                <button id="submitButton" type="submit" v-on:click=mylog><img src="./img/download.jpg" width = 10 /> Send Info</button>
+                <button id="testButton" type="submit" v-on:click=getAnswers ><img src="./img/download.jpg" width = 10 /> TESTING</button>
+                <div  v-if="showAnswers" id="returnOrder">
+                    <h4>This is your order:</h4>
+                    Name: {{name}} <br />
+                    E-mail: {{email}} <br />
+                    Street: {{street}} <br />
+                    House nr: {{house}} <br />
+                    Payment method: {{payment}} <br />
+                    Gendet: {{gender}} <br />
+                    Selected burgers:
+                    <span v-for="burger in selectedburgers">
+                        {{burger}}, 
+                    </span>
+                </div>
         </main>
         <footer>
             <p>

@@ -13,8 +13,21 @@ const vm = new Vue({
 */
 
 var vm = new Vue({
-    el: '#burgerTable',
+    el: '#mainBody',
     data: {
-    burgers: burgers
+    burgers: burgersJSON,
+    name: "",
+    email: "",
+    street: "",
+    house: "",
+    payment: "Swish",
+    gender: "",
+    //answers: [name, email, house, payment]
+    showAnswers: false,
+    selectedburgers: []
+},
+methods: {
+    mylog: mylog,
+    getAnswers: getAnswers
 }
 })
