@@ -1,34 +1,31 @@
+'use strict';
+const socket = io();
+
 function mylog(a) {
     console.log(a);
 }
-
+/*
 function getAnswers() {
-    /*
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var street = document.getElementById("street").value;
-    var house = document.getElementById("house").value;
-    var payment = document.getElementById("payment").value;
-    var radio = document.getElementsByName("Gender");
-    for (var i = 0, length = radio.length; i < length; i++){
-        if (radio[i].checked) {
-            var gender = radio[i].id;
-            break
-        }
-    }
-    let answerArray = [name, email, street, house, payment, gender];
-    console.log(answerArray);*/
-
     this.showAnswers = true;
     let burgers = this.burgers;
+    this.order.selectedburgers = [];
     for(let i = 0; i < burgers.length; i++){
         var burgerbutton = document.getElementById(burgers[i].name);
         if (burgerbutton.checked) {
-            this.selectedburgers.push(burgers[i].name);
+            this.order.selectedburgers.push(burgers[i].name);
             mylog(burgers[i].name);
+            }
         }
-
 }
+*/
+
+let order = {
+    name: "",
+    email: "email@here",
+    payment: "Swish",
+    gender: "male",
+    selectedburgers: [],
+    details: {x: -20, y: -20}
 }
 
 //let submitButton = document.getElementById("submitButton");

@@ -3,11 +3,20 @@
         <link rel="reset" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Gabriel's burgers</title>
-        <meta charset="utf-8"/>
-         <script src="js/js_script.js" defer></script>
-         <script src="js/vue_script.js" defer></script>
+
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DELI-VERY MAP</title>
+        <link rel="stylesheet" href="css/deli-very.css">
+        <script src="/vue/vue.js" defer></script>
+        <script src="/socket.io/socket.io.js" defer></script>
+        <script src="js/deli-very.js" defer></script>
+
          <script src="https://vuejs.org/js/vue.js"></script>
          <script type="text/javascript" src="js/menu.js"></script>
+         <script src="js/js_script.js" defer></script>
+         <script src="js/vue_script.js" defer></script>
     </head>
     <body>
         <main id ="mainBody">
@@ -55,23 +64,15 @@
                 <p>This is where you provide necessary information</p>
                 <p>
                     <label for="Full name">Name</label><br>
-                    <input v-model="name" type="text" id="name" name="n" required="required" placeholder="First and last name" />
+                    <input v-model="order.name" type="text" id="name" name="n" required="required" placeholder="First and last name" />
                 </p>
                 <p>
                     <label for="E-mail">email</label><br>
-                    <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
-                </p>
-                <p>
-                    <label for="street">Street name</label><br>
-                    <input v-model="street" type="text" id="street" name="st" placeholder="Street name" />
-                </p>
-                <p>
-                    <label for="house">House number</label><br>
-                    <input v-model="house" type="number" id="house" name="hn" placeholder="House number" />
+                    <input v-model="order.email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
                 </p>
                 <p>
                     <label for="payment">Payment</label><br />
-                    <select v-model="payment" id="payment" name="py">
+                    <select v-model="order.payment" id="payment" name="py">
                         <option selected = "selected">Swish</option>
                         <option>Credit Card</option>
                         <option>Bitcoin</option>
@@ -80,26 +81,47 @@
                 </p>
                 <p>
                     Choose Gender <br>
-                    <input v-model="gender" type="radio" name="Gender" id = "male" value = male> <label for="male">Male</label><br>
-                    <input v-model="gender" type="radio" name="Gender" id = "female" value = female> <label for="female">Female</label><br>
-                    <input v-model="gender" type="radio" name="Gender" id = "nonbinary" value = "non binary"/> <label for="nonbinary">Non binary</label><br>
-                    <input v-model="gender" checked = "checked" type="radio" name="Gender" id = "none" value = none> <label for="none">Do not wish to provide</label><br>
+                    <input v-model="order.gender" type="radio" name="Gender" id = "male" value = male> <label for="male">Male</label><br>
+                    <input v-model="order.gender" type="radio" name="Gender" id = "female" value = female> <label for="female">Female</label><br>
+                    <input v-model="order.gender" type="radio" name="Gender" id = "nonbinary" value = "non binary"/> <label for="nonbinary">Non binary</label><br>
+                    <input v-model="order.gender" checked = "checked" type="radio" name="Gender" id = "none" value = none> <label for="none">Do not wish to provide</label><br>
                 </p>
-                <button id="submitButton" type="submit" v-on:click=mylog><img src="./img/download.jpg" width = 10 /> Send Info</button>
-                <button id="testButton" type="submit" v-on:click=getAnswers ><img src="./img/download.jpg" width = 10 /> TESTING</button>
+
+
+
+                <body>
+                  <h1> Click in the map! </h1>
+                  <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+                  <div class="view-box">
+                    <div id="dots" v-on:click="displayOrder">
+                        <!--<div
+
+                          v-for="(order, key) in orders"
+                          v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">-->
+                        <div v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+
+                        </div>
+                    </div>
+                  </div>
+                </body>
+                </html>
+
+
+                <button id="submitButton" type="submit" v-on:click=addOrder ><img src="./img/download.jpg" width = 10 /> Send Info</button>
+                <!-- <button id="testButton" type="submit" v-on:click=getAnswers ><img src="./img/download.jpg" width = 10 /> TESTING</button> -->
                 <div  v-if="showAnswers" id="returnOrder">
                     <h4>This is your order:</h4>
-                    Name: {{name}} <br />
-                    E-mail: {{email}} <br />
-                    Street: {{street}} <br />
-                    House nr: {{house}} <br />
-                    Payment method: {{payment}} <br />
-                    Gendet: {{gender}} <br />
+                    Name: {{order.name}} <br />
+                    E-mail: {{order.email}} <br/>
+                    Payment method: {{order.payment}} <br />
+                    Gendet: {{order.gender}} <br />
                     Selected burgers:
-                    <span v-for="burger in selectedburgers">
-                        {{burger}}, 
+                    <span v-for="burger in order.selectedburgers">
+                        {{burger}},
                     </span>
                 </div>
+
+                </section>
         </main>
         <footer>
             <p>
